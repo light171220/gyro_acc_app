@@ -1,16 +1,27 @@
-# gyro_acc_app
+# Nano 33 BLE IMU Data Collection System
+## Overview
+This project creates a power-efficient system for collecting and visualizing accelerometer and gyroscope data from an Arduino Nano 33 BLE. The system transmits sensor data over Bluetooth Low Energy at 5-second intervals and enters sleep mode between transmissions to conserve power.
+## Components
+Arduino Firmware
+The Arduino code handles:
 
-A new Flutter project.
+Collection of accelerometer and gyroscope data from the LSM9DS1 IMU
+Packaging and transmission of data over Bluetooth LE
+Power management through intelligent sleep modes
+Visual status indication through the onboard LED
 
-## Getting Started
+## Mobile Application
+The Flutter mobile app provides:
 
-This project is a starting point for a Flutter application.
+Device discovery and connection to the Arduino
+Real-time display of sensor values
+Time-series visualization of historical data
+3D representation of device orientation based on sensor readings
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Power Efficiency: The Arduino enters deep sleep mode when not connected and light sleep when connected to maximize battery life
+Easy Connectivity: BLE connection makes data accessible to most modern smartphones
+Rich Visualization: Interactive charts show trends in the sensor data over time
+3D Orientation Display: Visual representation of the device's physical orientation
+Reliable Communication: Robust connection handling ensures data integrity
